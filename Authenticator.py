@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from flask import Flask, redirect, request, jsonify, session
 
 app = Flask(__name__)
-app.secret_key = "76d456f8-571c-4789-a647-9f7387828"
+app.secret_key = os.getenv("SPOTIFY_APP_SECRET_KEY")
 
 SPOTIFY_CLIENT_ID = os.getenv("CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("CLIENT_SECRET")
